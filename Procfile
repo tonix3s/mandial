@@ -1,1 +1,1 @@
-web: gunicorn mymrnotes.wsgi.py --log-file -
+web: gunicorn mymrnotes.wsgi
