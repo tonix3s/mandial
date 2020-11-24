@@ -1,1 +1,1 @@
-web: gunicorn mymrnotes.wsgi
+web: gunicorn MR.wsgi
