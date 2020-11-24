@@ -23,7 +23,7 @@ STATIC_DIR=os.path.join(BASE_DIR,'static')
 SECRET_KEY = '#(98m4frt#l$wm4_8t4bl)@cbr$^4jvlp-0z=zcf68wi3kq$c#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['https://bibmr.herokuapp.com/','127.0.0.1']
 
