@@ -76,14 +76,23 @@ WSGI_APPLICATION = 'MR.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 # Heroku: Update database configuration from $DATABASE_URL.
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd2p8o6pcu97vqr',
+        'HOST': 'ec2-54-157-66-140.compute-1.amazonaws.com',
+        'PORT':'5432'
+        'USER':'bntsvcrejpbjcb'
+        'PASSWORD':'84c4ac78e2bdca7c0b06989f4b374495b420e5029f7a90cf40e47faddbb6e772'
+        
     }
 }
 
-
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
